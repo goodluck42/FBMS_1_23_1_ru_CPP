@@ -136,9 +136,9 @@ int main()
 	// cout << result << '\n'; // error
 
 	/////////////////
+	
 	// Task1
-
-	/*{
+	{
 		int result = 40;
 
 		cout << result << '\n';
@@ -156,7 +156,14 @@ int main()
 		int result = 45;
 
 		cout << result << '\n';
-	}*/
+	}
+
+
+
+	int value = 253343;
+
+
+	cout << value % 10 << '\n';
 
 	return 0;
 }
