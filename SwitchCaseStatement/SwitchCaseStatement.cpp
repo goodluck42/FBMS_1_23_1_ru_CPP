@@ -1,5 +1,4 @@
 #include <iostream>
-#include <Windows.h>
 
 using namespace std;
 
@@ -7,7 +6,13 @@ using namespace std;
 
 int main()
 {
-	int value = -20;
+	setlocale(0, "ru");
+
+
+	int value = 20;
+
+	cout << "Hello C++" << value << '\n';
+
 	// [1, 100]
 
 	/*if (value >= 1 && value <= 100)
