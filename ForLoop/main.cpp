@@ -62,18 +62,39 @@ int main()
 	}*/
 
 	// For sample 5
-	{
-		for (int i = 0; i < 5; ++i)
-		{
-			for (int j = 0; j < 5; ++j) // отрисовка строки
-			{
-				std::cout << "* ";
-			}
+	//{
+	//	for (int i = 0; i < 5; ++i)
+	//	{
+	//		for (int j = 0; j < 5; ++j) // отрисовка строки
+	//		{
+	//			std::cout << "* ";
+	//		}
 
-			std::cout << '\n';
+	//		std::cout << '\n';
+	//	}
+	//}
+
+	int len = 9;
+	int mid = len % 2 == 0 ? len / 2 : len / 2 + 1;
+
+	for (int i = 0; i < len; ++i)
+	{
+		for (int j = 0; i < mid ? (j < i + 1) : (j < len - i); ++j)
+		{
+			std::cout << "* ";
 		}
+
+		std::cout << '\n';
 	}
 
+	int number = -90;
+
+	int is_positive = (number > 0) ? 1 : 0;
+
+	std::cout << ((number > 0) ? "positive" : (number == 0 ? "zero" : "negative"));
+
+	//std::cout << is_positive;
 
 
+	//system("pause");
 }
