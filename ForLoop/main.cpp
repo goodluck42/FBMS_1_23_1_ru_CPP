@@ -87,14 +87,25 @@ int main()
 		std::cout << '\n';
 	}
 
-	int number = -90;
+	//int number = -90;
 
-	int is_positive = (number > 0) ? 1 : 0;
+	//int is_positive = (number > 0) ? 1 : 0;
 
-	std::cout << ((number > 0) ? "positive" : (number == 0 ? "zero" : "negative"));
+	//std::cout << ((number > 0) ? "positive" : (number == 0 ? "zero" : "negative"));
 
-	//std::cout << is_positive;
+	////std::cout << is_positive;
 
 
-	//system("pause");
+	////system("pause");
+
+
+	int num1 = 10;
+
+
+	if (num1 >= 5 && num1 <= 20) // [5, 20]
+	{
+		std::cout << "in range!\n";
+	}
+
+
 }
