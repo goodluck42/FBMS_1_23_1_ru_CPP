@@ -123,6 +123,9 @@ int main()
 	}*/
 
 	{
-		int arr[4]{ 10, 20, 30, 40 };
+		const int length = 4;
+		int arr[length]{ 10, 20, 30, 40 };
+
+		// 40 30 20 10
 	}
 }
