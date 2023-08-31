@@ -171,6 +171,7 @@ int main()
 	// Temporary dont work
 	{
 		int target;
+		int iterations = 0;
 
 		std::cout << "Enter value to find -> ";
 		std::cin >> target;
@@ -180,8 +181,9 @@ int main()
 		int r = size - 1;
 
 
-		while (l < r)
+		while (l <= r)
 		{
+			iterations++;
 			int m = l + (r - l) / 2;
 
 			if (arr[m] == target)
@@ -199,6 +201,8 @@ int main()
 				r = m - 1;
 			}
 		}
+
+		std::cout << "iterations = " << iterations;
 	}
 	
 }
