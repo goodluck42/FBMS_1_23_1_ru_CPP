@@ -1,5 +1,6 @@
 #include <iostream>
 #include <random>
+#include <windows.h>
 
 constexpr int default_rows = 3;
 constexpr int default_cols = 4;
@@ -18,7 +19,7 @@ void print_array(int array[][default_cols], int rows, int cols = default_cols);
 double sum(int a, int b)
 {
     std::cout << "double sum(int a, int b);\n";
-    
+
     return a + b;
 }
 
@@ -32,14 +33,14 @@ double sum(int a, int b)
 double sum(double a, int b)
 {
     std::cout << "double sum(double a, int b);\n";
-    
+
     return a + b;
 }
 
 double sum(int a, double b)
 {
     std::cout << "double sum(int a, double b);\n";
-    
+
     return a + b;
 }
 
@@ -49,6 +50,13 @@ char sum(char a, int b)
 
     return a + b;
 }
+
+enum class Test
+{
+    A,
+    B,
+    C
+};
 
 int main(int argc, char* argv[])
 {
@@ -87,8 +95,29 @@ int main(int argc, char* argv[])
     //     print_array(matrix, rows);
     // }
 
-    std::cout << sizeof(std::default_random_engine);
+    //std::cout << sizeof(std::default_random_engine);
     
+    Test s = Test::A;
+
+
+    switch (s)
+    {
+        case Test::A:
+            break;
+        case Test::B:
+            break;
+        case Test::C:
+            break;
+        default: ;
+    }
+
+    COORD coord {10, 10};
+    HANDLE console_handle = GetStdHandle(STD_OUTPUT_HANDLE); 
+    SetConsoleCursorPosition(console_handle, coord);
+
+    std::cout << "test!" << '\n';
+
+    system("pause");
     return 0;
 }
 
@@ -110,7 +139,7 @@ void print_array(int array[][default_cols], int rows, int cols)
         {
             std::cout << ',';
         }
-        
+
         std::cout << '\n';
     }
     std::cout << "}";
@@ -121,10 +150,10 @@ void print_array(int array[], int size)
     if (size == 0)
     {
         std::cout << "{}";
-        
+
         return;
     }
-    
+
     std::cout << "{ ";
 
     for (int i = 0; i < size; ++i)
@@ -145,10 +174,10 @@ void print_array(double array[], int size)
     if (size == 0)
     {
         std::cout << "{}";
-        
+
         return;
     }
-    
+
     std::cout << "{ ";
 
     for (int i = 0; i < size; ++i)
