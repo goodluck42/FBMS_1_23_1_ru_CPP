@@ -73,19 +73,21 @@ int main(int argc, char* argv[])
         //std::cout << sum('A', 5) << '\n';
     }*/
 
-    {
-        constexpr int rows = 3;
-        constexpr int cols = 4;
-        
-        int matrix[rows][cols]
-        {
-            {51, 32, 23, 15},
-            {22, 12, 53, 52},
-            {19, 52, 67, 53},
-        };
+    // {
+    //     constexpr int rows = 3;
+    //     constexpr int cols = 4;
+    //     
+    //     int matrix[rows][cols]
+    //     {
+    //         {51, 32, 23, 15},
+    //         {22, 12, 53, 52},
+    //         {19, 52, 67, 53},
+    //     };
+    //
+    //     print_array(matrix, rows);
+    // }
 
-        print_array(matrix, rows);
-    }
+    std::cout << sizeof(std::default_random_engine);
     
     return 0;
 }
