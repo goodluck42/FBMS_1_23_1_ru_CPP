@@ -1,9 +1,12 @@
 #include <iostream>
 #include <random>
 
+constexpr int default_rows = 3;
+constexpr int default_cols = 4;
+
 void print_array(int array[], int size);
 void print_array(double array[], int size);
-void print_array(int array[][4], int rows, int cols = 4);
+void print_array(int array[][default_cols], int rows, int cols = default_cols);
 
 // double sum(int a, int b, int c = 10)
 // {
@@ -87,7 +90,7 @@ int main(int argc, char* argv[])
     return 0;
 }
 
-void print_array(int array[][4], int rows, int cols)
+void print_array(int array[][default_cols], int rows, int cols)
 {
     /*
      * {
