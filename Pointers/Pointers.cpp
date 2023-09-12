@@ -37,6 +37,11 @@ void print(int* arr, int size)
     // std::cout << 2[arr] << '\n';
 }
 
+void change(int* ptr)
+{
+    *ptr *= 2;
+}
+
 int main(int argc, char* argv[])
 {
    
@@ -153,12 +158,18 @@ int main(int argc, char* argv[])
     }*/
     
 
-    int* result = foo();
+    // int* result = foo();
+    //
+    // std::cout << result[1] << '\n';
+    //
+    // delete[] result;
 
-    std::cout << result[1] << '\n';
 
-    delete[] result;
-    
+    int v = 40;
+
+    change(&v);
+
+    std::cout << v;
     
     return 0;
 }
