@@ -79,35 +79,52 @@ int main(int argc, char* argv[])
     //     delete[] arr1;
     //     delete[] arr2;
     // }
+    // {
+    //     int capacity = 4;
+    //     int size = 0;
+    //
+    //
+    //     // &arr = 0xffccc2
+    //     // arr = 0xffa5
+    //     int* arr = new int[capacity]{};
+    //
+    //     arr = append(arr, &capacity, &size, 10);
+    //     arr = append(arr, &capacity, &size, 12);
+    //     arr = append(arr, &capacity, &size, 40);
+    //     arr = append(arr, &capacity, &size, 90);
+    //     arr = append(arr, &capacity, &size, 256);
+    //     arr = append(arr, &capacity, &size, 12);
+    //     arr = append(arr, &capacity, &size, 144);
+    //     arr = append(arr, &capacity, &size, 166);
+    //     arr = append(arr, &capacity, &size, 244);
+    //     arr = append(arr, &capacity, &size, 0);
+    //
+    //
+    //     std::cout << "capacity = " << capacity << '\n';
+    //     std::cout << "size = " << size << '\n';
+    //
+    //     print(arr, size);
+    //     std::cout << '\n';
+    //     print(arr, capacity);
+    //
+    //     delete[] arr;
+    // }
 
     int capacity = 4;
-    int size = 0;
+    int size = 3;
+    int* arr = new int[capacity] {1, 5, 9};
+    
+    
+    for (int i = size; i >= 1; --i)
+    {
+        arr[i] = arr[i - 1];
+    }
 
 
-    // &arr = 0xffccc2
-    // arr = 0xffa5
-    int* arr = new int[capacity]{};
+    arr[0] = 99;
 
-    arr = append(arr, &capacity, &size, 10);
-    arr = append(arr, &capacity, &size, 12);
-    arr = append(arr, &capacity, &size, 40);
-    arr = append(arr, &capacity, &size, 90);
-    arr = append(arr, &capacity, &size, 256);
-    arr = append(arr, &capacity, &size, 12);
-    arr = append(arr, &capacity, &size, 144);
-    arr = append(arr, &capacity, &size, 166);
-    arr = append(arr, &capacity, &size, 244);
-    arr = append(arr, &capacity, &size, 0);
-
-
-    std::cout << "capacity = " << capacity << '\n';
-    std::cout << "size = " << size << '\n';
-
+    ++size;
     print(arr, size);
-    std::cout << '\n';
-    print(arr, capacity);
-
-    delete[] arr;
-
+    
     return 0;
 }
