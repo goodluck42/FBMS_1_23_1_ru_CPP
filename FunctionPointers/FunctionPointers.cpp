@@ -152,6 +152,19 @@ template <typename T>
 using operation = T (*)(T, T);
 using int64 = long long;
 
+template<typename T>
+Array<T>* filter(Array<T>* arr, bool(*filter_func)(T));
+
+bool positive(int value)
+{
+    return value > 0;
+}
+
+bool odd(int value)
+{
+    return value % 2 == 1;
+}
+
 int main()
 {
     // int64 s = 102030;
@@ -179,32 +192,35 @@ int main()
 
     std::cout << greater(10, 20) << '\n';
 
-    // {
-    //     Array<int>* arr = create<int>();
-    //
-    //     append(arr, 11);
-    //     append(arr, 20);
-    //     append(arr, 15);
-    //     append(arr, 16);
-    //     append(arr, 13);
-    //
-    //     bubble_sort(arr, &less);
-    //
-    //     print(arr);
-    //
-    //     destroy(arr);
-    // }
-
     {
-        //int(*funcs[3])(int, int) {mult, add, subtract};
-        operation<int> funcs[3]{&mult, &add, &subtract};
+        Array<int>* arr = create<int>();
+    
+        append(arr, 11);
+        append(arr, 20);
+        append(arr, 15);
+        append(arr, 16);
+        append(arr, 13);
+    
+        //bubble_sort(arr, &less);
 
-        //funcs[0] = mult;
-
-        for (int i = 0; i < 3; ++i)
-        {
-            std::cout << funcs[i](10, 20) << '\n';
-        }
+        Array<int>* positives = filter(arr, odd);
+        
+        print(arr);
+    
+        destroy(positives);
+        destroy(arr);
     }
+
+    // {
+    //     //int(*funcs[3])(int, int) {mult, add, subtract};
+    //     operation<int> funcs[3]{&mult, &add, &subtract};
+    //
+    //     //funcs[0] = mult;
+    //
+    //     for (int i = 0; i < 3; ++i)
+    //     {
+    //         std::cout << funcs[i](10, 20) << '\n';
+    //     }
+    // }
     return 0;
 }
