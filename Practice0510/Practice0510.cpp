@@ -38,5 +38,9 @@ void s(TObject<T>*) { std::cout << "s(TObject<T>*);"; }
 
 int main(int argc, char* argv[])
 {
+    // [ ] [O] [X]
+    // [ ] [ ] [ ]
+    // [ ] [ ] [ ]
+    
     return 0;
 }
