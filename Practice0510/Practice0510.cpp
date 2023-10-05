@@ -36,8 +36,28 @@ void s(TObject<T>*) { std::cout << "s(TObject<T>*);"; }
 
 // Task1 end;
 
+
+void place(char grid[3][3], int x, int y, bool player)
+{
+    if (grid[x][y] == ' ')
+    {
+        //grid[x][y] = player ? 'X' : 'O';
+        
+        if (player) // X move
+        {
+            grid[x][y] = 'X';
+        }
+        else // O move
+        {
+            grid[x][y] = 'O';
+        }
+    }
+}
+
 int main(int argc, char* argv[])
 {
+
+    char grid[3][3];
     // [ ] [O] [X]
     // [ ] [ ] [ ]
     // [ ] [ ] [ ]
