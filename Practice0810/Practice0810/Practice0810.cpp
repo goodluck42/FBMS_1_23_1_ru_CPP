@@ -68,4 +68,30 @@ int main(int argc, char* argv[])
     }
     
     std::cout << "= " << range(engine) << '\n';
+
+
+    // Task2
+    // hello world
+    // a = 0
+    // b = 0
+    // c = 0
+    // ...
+    // d = 1
+    // h = 1
+    // e = 1
+    // l = 3
+    // o = 2
+    // r = 1
+
+
+    char c;
+
+    std::cin >> c;
+
+    c = (char)tolower(c);
+    
+    if (c >= 65 && c <= 90)
+    {
+        // 
+    }
 }
