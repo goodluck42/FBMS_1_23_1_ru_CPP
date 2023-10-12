@@ -41,8 +41,16 @@ int main(int argc, char* argv[])
     {
         std::cout << "Fail!" << '\n';
     }
-    
 
+    int* ptr[10];
+
+    ptr[0] = new int[3];
+    ptr[1] = new int[4];
+    ptr[2] = new int[5];
+
+
+
+    *(ptr + 2); // ptr[2]
     /*{
         coord px = -1;
         coord py = -1;
