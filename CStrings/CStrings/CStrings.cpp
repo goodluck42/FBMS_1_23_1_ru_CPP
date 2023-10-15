@@ -6,6 +6,7 @@
 //     std::cout << typeid(data).name();
 // }
 
+
 void print(const char* str)
 {
     int i = 0;
@@ -135,8 +136,6 @@ int main(int argc, char* argv[])
         std::cout << buffer;
 
         delete[] buffer;
-
-        foo();
     }
     
     return 0;
