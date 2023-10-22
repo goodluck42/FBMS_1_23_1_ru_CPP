@@ -12,6 +12,17 @@ struct Time
     unsigned int seconds : 6; // 0 - 60
 };
 
+struct Student
+{
+    char name[32];
+};
+
+struct Test
+{
+    unsigned int a : 1;
+    unsigned int b : 1;
+};
+
 void print(Time* time)
 {
     std::cout << "hours = " << time->hours << '\n';
@@ -21,20 +32,39 @@ void print(Time* time)
 
 int main(int argc, char* argv[])
 {
-    time_t l_time{};
+    /*{
+        time_t l_time{};
 
-    l_time = time(&l_time);
+        l_time = time(&l_time);
     
-    tm* current_time = std::localtime(&l_time);
+        tm* current_time = std::localtime(&l_time);
 
-    std::cout << "Year: " << 1900 + current_time->tm_year << '\n';
-    std::cout << "Month: " << 1 + current_time->tm_mon << '\n';
-    std::cout << "Day (year): " << current_time->tm_yday << '\n';
-    std::cout << "Day (week): " << current_time->tm_wday << '\n';
-    std::cout << "Day (month): " << current_time->tm_mday << '\n';
-    std::cout << "Hours: " << current_time->tm_hour << '\n';
-    std::cout << "Minutes: " << current_time->tm_min << '\n';
-    std::cout << "Seconds: " << current_time->tm_sec << '\n';
+        std::cout << "Year: " << 1900 + current_time->tm_year << '\n';
+        std::cout << "Month: " << 1 + current_time->tm_mon << '\n';
+        std::cout << "Day (year): " << current_time->tm_yday << '\n';
+        std::cout << "Day (week): " << current_time->tm_wday << '\n';
+        std::cout << "Day (month): " << current_time->tm_mday << '\n';
+        std::cout << "Hours: " << current_time->tm_hour << '\n';
+        std::cout << "Minutes: " << current_time->tm_min << '\n';
+        std::cout << "Seconds: " << current_time->tm_sec << '\n';
+    }*/
+
+    Test obj;
+
+    obj.a = 0;
+    obj.b = 0;
+
+    int* data = (int*)&obj;
+
+    // 0b10
+    // |
+    // 0b01
+    *data = *data | 0b11;
+
+    std::cout << obj.a << '\n';
+    std::cout << obj.b << '\n';
+    
+    
     
     // delete current_time;
         
