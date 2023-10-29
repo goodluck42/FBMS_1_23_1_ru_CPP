@@ -1,0 +1,6 @@
+1test hello5
+こんにちは
+89
+text
+true
+тест
