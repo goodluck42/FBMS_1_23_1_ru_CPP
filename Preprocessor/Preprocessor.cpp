@@ -3,7 +3,6 @@
 #include "User.h"
 
 #define SAY_HELLO(NAME) std::cout << "Hello " << NAME;
-
 #define CREATE_VARIABLE(TYPE, NAME) TYPE G##NAME{};
 
 CREATE_VARIABLE(int, Val)
@@ -23,7 +22,6 @@ CREATE_SUM_FUNCTION(double)
 #define Термос() int main(int argc, char* argv[])
 
 #define VALUE 42
-
 
 void Call()
 {
@@ -48,7 +46,6 @@ BEGIN
         ShowGlobalValue();
         std::cout << &GlobalValue << " = " << GlobalValue << '\n';
     }*/
-
     {
         SAY_HELLO("Alex")
         std::cout << '\n';
