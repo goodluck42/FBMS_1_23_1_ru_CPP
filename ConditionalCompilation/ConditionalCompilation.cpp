@@ -8,7 +8,7 @@ int main(int argc, char* argv[])
 #ifndef TEST
     std::cout << "TEST macro is not defined!" << '\n';
 #endif
-    
+
 #ifdef DEBUG // #if defined(DEBUG)
     #if DEBUG_LEVEL == 1
         std::cout << "main" << '\n';
@@ -18,6 +18,5 @@ int main(int argc, char* argv[])
         std::cout << "int main(int argc, char* argv[])" << '\n';
     #endif
 #endif
-    
     return 0;
 }
